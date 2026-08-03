@@ -1,0 +1,124 @@
+- O que é ordenar: organizar uma estrutura de dados (cresc ou decresc) usando uma ou mais chaves de controles (variável)
+- Por que ordenar? porque estruturas ordenadas tem a busca ou a pesquisa mais eficiente, devido aos algoritmos baseados em árvores
+- Categorias de ordenação para os algoritmos
+    - memória interna ou memória externa
+    - estabilidade do algoritmo
+        estável: o processo de ordenação sempre garante a ordenação temporária da estrutura
+            [4,8,1,3,4,2]
+            [4,1,3,4,2,8]
+            [1,3,4,2,4,8]
+            [1,3,2,4,4,8]
+            [1,2,3,4,4,8]
+            [1,2,3,4,4,8]
+        
+        instável: o processo de ordenação não garante a ordenação temporária da estrutura
+            [4,8,1,3,4,2]
+            [1,8,4,3,4,2]
+            [1,2,4,3,4,8]
+            [1,2,3,4,4,8]
+            [1,2,3,4,4,8]
+            [1,2,3,4,4,8]
+            NÃO SÃO adequados para listas feitas em C ou C++ com alocação dinâmica de memória, como trabalhado na disciplina Estruturas de Dados
+
+
+        Obs.: ao ordenar os algoritmos garantem porções ordenadas na estrutura:
+            - final
+            - frente
+            - nas extremidades (piramide invertida)
+
+    - complexidade computacional: é a quantidade de esforço computacional (tarefas, rotinas, métodos) envolvido no algoritmo
+        - Na ordenação a complexidade dos algoritmos é medida pela quantidade de:
+            - comparações
+            - trocas
+            Categorias:
+                Complexidade fatorial       - O(n!)         - menos eficiente
+                Complexidade polinomial     - O(n^k) 
+                Complexidade Exponencial    - O(n^2)
+                Complexidade Linear         - O(n)
+                Complexidade Logaritmica    - O(log n)      - mais eficaz
+
+
+ATIVIDADE DE FIXAÇÃO
+
+ - Bolha (bubble sort) //Empurra o maior pro final
+        - memória interna
+        - estável
+        - O(nˆ2)
+        - porção ordenada: final
+
+  - Seleção (selection sort) // Empurra o menor pro começo
+        - memória interna
+        - instável
+        - O(nˆ2)
+        - porção ordenada: início
+
+  - Inserção (inserction sort) // Inserindo um a um
+        - memória interna
+        - estável
+        - O(nˆ2)
+        - porção ordenada: início
+
+  - Pente (combsort) // Parecido com o bubble, vai empurrando
+        - memória interna
+        - instável
+        - O(n²)
+        - porção ordenada: final
+
+  - Agitação (shakesort ou cocktailsort) // Organiza os dois lados, um pra esquerda, um pra direita
+        - memória interna
+        - estável
+        - O(n²)
+        - porção ordenada: início e final
+
+  - Shellsort // Divide a lista em grupos
+        - memória interna
+        - instável
+        - O(n²) (depende da sequência de incrementos)
+        - porção ordenada: sublistas separadas por intervalos (gaps)
+
+  - Bucketsort // Divide em baldes, depois junta tudo
+        - memória interna (pode ser adaptado para memória externa)
+        - estável (quando utiliza ordenação estável dentro dos baldes)
+        - O(n + k) em média; O(n²) no pior caso
+        - porção ordenada: baldes (buckets)
+
+    - Radix // Ordena um dígito por vez, unidades, dezenas, centenas ...
+        - memória interna
+        - estável
+        - O(d·(n + k))
+        - porção ordenada: dígitos (LSD ou MSD)
+
+    - Heapsort // Árvore e coloca no final
+        - memória interna
+        - instável
+        - O(n log n)
+        - porção ordenada: final
+
+    - Mergesort // Divide em partes pequenas, ordena e junta
+        - memória interna (também muito utilizado em memória externa)
+        - estável
+        - O(n log n)
+        - porção ordenada: sublistas mescladas
+
+    - Quicksort // Ordena em torno do número pivô
+        - memória interna
+        - instável
+        - O(n log n) em média; O(n²) no pior caso
+        - porção ordenada: em torno do pivô (particionamento)
+
+-- Eficiência × Eficácia - -
+Eficaz: atinge o objetivo (ordena a lista).
+Eficiente: atinge o objetivo com menos tempo e/ou memória.
+
+Qual o melhor algoritmo de ordenação?
+Depende:
+    - Lista pequena ou quase ordenada: Insertion Sort.
+    - Uso geral: Quick Sort.
+    - Necessita estabilidade: Merge Sort.
+    - Grandes arquivos (memória externa): Merge Sort.
+    - Números inteiros: Radix Sort.
+
+Cenários de um processo de ordenação (Pior caso)
+    - Bolha (Bubble Sort): lista em ordem decrescente, quando se deseja ordenar em crescente.
+    - Seleção (Selection Sort): independe da ordem da lista, pois sempre realiza o mesmo número de comparações (alguns materiais citam lista ordenada).
+    - Inserção (Insertion Sort): lista em ordem decrescente, quando se deseja ordenar em crescente.
