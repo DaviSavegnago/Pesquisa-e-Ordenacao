@@ -1,0 +1,219 @@
+PESQUISA E ORDENAÇÃO
+
+1) O que é ordenar?
+Ordenar é organizar os elementos de uma estrutura de dados em uma determinada ordem, normalmente crescente ou decrescente, utilizando uma ou mais chaves de ordenação.
+
+2) O que é indexar?
+Indexar é criar uma estrutura auxiliar que permite localizar e acessar dados de forma mais rápida e eficiente.
+
+3) Por que ordenar?
+Porque estruturas de dados ordenadas facilitam e tornam mais eficiente a pesquisa e o processamento dos dados.
+
+
+4) Os algoritmos de ordenação são categorizados por complexidade e estabilidade. Explique os conceitos:
+Complexidade é o esforço computacional necessário para executar um algoritmo conforme aumenta o tamanho da estrutura. 
+Na ordenação, pode ser analisada pela quantidade de comparações, trocas, tempo e memória utilizados.
+
+A estabilidade indica se o algoritmo mantém a ordem relativa dos elementos que possuem a mesma chave.
+Um algoritmo estável mantém a ordem original dos elementos iguais.
+Um algoritmo instável não garante a manutenção dessa ordem.
+
+
+5) Qual ou quais os melhores métodos de ordenação?
+Não existe um único melhor método de ordenação. O melhor método depende da situação e das características dos dados.
+Insertion Sort é adequado para listas pequenas ou quase ordenadas.
+Quick Sort possui bom desempenho geral.
+Merge Sort é adequado quando é necessária estabilidade ou quando trabalhamos com memória externa.
+Radix Sort pode ser eficiente para determinados tipos de números inteiros.
+Entre os métodos básicos estudados, o Pente pode apresentar desempenho melhor que Bubble, Selection e Insertion em muitas situações.
+
+
+6) O que tem em comum os métodos bolha, seleção e inserção?
+Os três são métodos de ordenação baseados em comparações, trabalham em memória interna e possuem complexidade O(n²) no pior caso.
+Todos organizam os elementos progressivamente por meio de comparações e movimentações.
+
+7) Quais são as características do Bubble Sort?
+- Memória interna
+- Estável
+- O(n²)
+- Compara elementos vizinhos
+- Leva os maiores elementos para o final
+- Possui a parte ordenada no final
+
+
+8) Quais são as características do Selection Sort?
+- Memória interna
+- Instável
+- O(n²)
+- Procura o menor elemento
+- Coloca o menor elemento no início
+- Possui a parte ordenada no início
+
+
+9) Quais são as características do Insertion Sort?
+- Memória interna
+- Estável
+- O(n²)
+- Insere os elementos um por vez
+- Mantém uma parte inicial ordenada
+- O elemento é inserido na posição correta
+
+
+10) Quais são as características do Comb Sort (Pente)?
+- Memória interna
+- Instável
+- O(n²), conforme a classificação utilizada na disciplina
+- Utiliza um intervalo chamado gap
+- Compara elementos que estão distantes
+- Diminui o gap progressivamente
+- No final, quando gap chega a 1, funciona de forma semelhante ao Bubble Sort
+- A pré-organização ocorre utilizando a distância entre elementos
+
+
+11) Quais são as características do Cocktail Sort (Agitação)?
+- Memória interna
+- Estável
+- O(n²)
+- É uma variação do Bubble Sort
+- Ordena em dois sentidos
+- Na ida, leva os maiores elementos para o final
+- Na volta, leva os menores elementos para o início
+- Possui partes ordenadas nas duas extremidades
+
+12) Qual a diferença entre Bubble Sort e Cocktail Sort?
+O Bubble Sort percorre os elementos em um único sentido, normalmente da esquerda para a direita.
+O Cocktail Sort percorre os elementos nos dois sentidos: primeiro da esquerda para a direita e depois da direita para a esquerda.
+
+
+13) O que é complexidade de um algoritmo?
+Complexidade é a quantidade de esforço computacional necessária para executar um algoritmo.
+Na ordenação, podemos analisar principalmente:
+- Comparações
+- Trocas ou movimentações
+- Tempo de execução
+- Memória utilizada
+
+A complexidade pode ser representada pela notação Big O.
+
+14) O que significa O(1), O(log n), O(n), O(n²), O(n^k) e O(n!)?
+
+O(1) = complexidade constante.
+
+O(log n) = complexidade logarítmica.
+
+O(n) = complexidade linear.
+
+O(n²) = complexidade quadrática.
+
+O(n^k) = complexidade polinomial.
+
+O(n!) = complexidade fatorial.
+
+15) Como saber qual algoritmo possui maior complexidade entre métodos de ordenação?
+Podemos analisar a quantidade de operações realizadas pelo algoritmo, principalmente o número de comparações e trocas/movimentações.
+Quanto maior o crescimento da quantidade de operações conforme aumenta o tamanho da estrutura, maior tende a ser a complexidade.
+
+Exemplo:
+O(n) é mais eficiente que O(n²) para estruturas grandes.
+
+16) O que é estabilidade em um algoritmo de ordenação?
+
+É a capacidade de manter a ordem relativa original entre elementos que possuem a mesma chave de ordenação.
+
+Estável = mantém a ordem dos elementos iguais.
+
+Instável = não garante a manutenção dessa ordem.
+
+
+17) Quais dos cinco métodos estudados no momento são estáveis?
+
+Estáveis:
+
+- Bubble Sort
+- Insertion Sort
+- Cocktail Sort
+
+Instáveis:
+
+- Selection Sort
+- Comb Sort
+
+
+18) Qual método leva o maior elemento para o final?
+
+Bubble Sort e Cocktail Sort.
+
+No Cocktail Sort isso ocorre durante a passagem da esquerda para a direita.
+
+
+19) Qual método leva o menor elemento para o início?
+
+Selection Sort e Cocktail Sort.
+
+No Cocktail Sort isso ocorre durante a passagem da direita para a esquerda.
+
+
+20) Qual método utiliza um gap?
+
+Comb Sort (Pente).
+
+O gap representa a distância entre os elementos que serão comparados.
+
+
+21) Qual método procura o menor elemento?
+
+Selection Sort.
+
+
+22) Qual método insere um elemento na posição correta?
+
+Insertion Sort.
+
+27) Como funciona o Cocktail Sort?
+
+Primeiro o algoritmo percorre o vetor da esquerda para a direita.
+
+Durante essa passagem, os maiores elementos são levados para o final.
+
+Depois o limite final é diminuído.
+
+Em seguida, o algoritmo percorre o vetor da direita para a esquerda.
+
+Durante essa passagem, os menores elementos são levados para o início.
+
+Depois o limite inicial é aumentado.
+
+O processo continua até que o vetor esteja ordenado.
+
+
+28) O que é eficiência e eficácia?
+
+Eficácia significa atingir o objetivo.
+
+Eficiência significa atingir o objetivo utilizando menos recursos, como tempo e memória.
+
+
+29) Quais são as variáveis normalmente acompanhadas em um benchmark de ordenação?
+- Quantidade de elementos
+- Quantidade de comparações
+- Quantidade de trocas ou movimentações
+- Tempo de execução
+
+
+30) Qual é a ideia principal de cada método?
+
+Bubble Sort:
+Compara vizinhos e empurra o maior para o final.
+
+Selection Sort:
+Procura o menor e coloca no início.
+
+Insertion Sort:
+Pega um elemento e insere na posição correta.
+
+Comb Sort:
+Compara elementos distantes utilizando um gap.
+
+Cocktail Sort:
+É semelhante ao Bubble, mas ordena nos dois sentidos.
+Cocktail = vai e volta.
