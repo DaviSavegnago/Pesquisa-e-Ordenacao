@@ -1,0 +1,25 @@
+                          - MERGESORT (Intercalar)
+
+  .Recursivo
+  .Composto por 2 métodos:
+    merge -> recursivo
+    intercalar -> ordenar no retorno do empilhamento
+
+  . O(n log n) sempre
+
+  OBS: O processo é baseado em divisões da estrutura, recursivamente, sempre no meio
+
+  Algo Rhytmics: https://youtu.be/PArhmmnkVsU?si=J6Zy_CDb5NduF8Ap
+
+
+                        - QUICKSORT (Pivô)
+
+  .Recursivo
+  .Composto por 2 métodos:
+    quick -> recursivo
+    posicionar -> ordenar o pivô
+  . O(n log n) e O(n²) no pior caso
+
+  OBS: O processo é baseado em decisões de estrutura, recursivamente, porém obedecendo a posição do pivô
+
+  Algo Rhytmics: https://youtu.be/3San3uKKHgg?si=njOiXWLnzZDM_7YE
